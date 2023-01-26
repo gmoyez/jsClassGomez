@@ -12,4 +12,5 @@ more comment stuff
 */
 
 // here is a comment in js
-alert("illustrating comments");
+alert("illustrating comments")
+console.log("Hello Teacher!!!!!!!!")
