@@ -8,7 +8,7 @@ let pizza = 1958
 
 let adaptable = true 
     console.log("adaptable is true - ", adaptable) 
-        // boolean // Word is ever changing so we have to learn to adapt
+        // boolean // World is ever changing so we have to learn to adapt
 
 moyez = "me" 
     console.log("moyez is me which is a typeof ", (typeof moyez))
