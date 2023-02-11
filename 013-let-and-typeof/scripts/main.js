@@ -1,24 +1,22 @@
-let moyez = "gomez" 
-console.log("moyez is gomez - ", moyez)
-// string
+let moyez = "me" 
+    console.log("moyez is me - ", moyez)
+        // string // My nickname, nice to meet you
 
-moyez = 1990
-console.log("moyez is 1990 -", moyez)
-// number
+let pizza = 1958
+    console.log("pizza is 1958 -", pizza)
+        // number // Specifically choose 1958 because Me n Ed's was founded that year 
 
-moyez = true 
-console.log("moyez is true - ", moyez) 
-//boolean
+let adaptable = true 
+    console.log("adaptable is true - ", adaptable) 
+        // boolean // Worl is ever changing so we have to learn to adapt
 
-moyez = "gomez" 
-console.log("moyez is gomez which is a typeof ", (typeof moyez))
-
-
-moyez = 1990
-console.log("moyez is 1990 which is a typeof", (typeof moyez))
+moyez = "me" 
+    console.log("moyez is me which is a typeof ", (typeof moyez))
 
 
-moyez = true 
-console.log("moyez is true which is a typeof ", (typeof moyez)) 
+pizza = 1958
+    console.log("pizza is 1958 which is a typeof", (typeof pizza))
 
 
+adaptable = true 
+    console.log("adaptable is true which is a typeof ", (typeof adaptable)) 
