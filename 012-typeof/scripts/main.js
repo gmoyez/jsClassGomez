@@ -15,9 +15,9 @@ console.log(`myName is value ${myName}`)
 console.log(`myAge is typeof ${typeof myAge}`)
 console.log(`myHappiness is typeof ${typeof myHappiness}`)
 
-// don't use var
-//if (true)  { 
-//    const myConst = 43
-//    console.log(myConst)
-//}
+//don't use var
+// if (true)  { 
+//     const myConst = 43
+//     console.log(myConst)
+// }
 
