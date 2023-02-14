@@ -1,12 +1,23 @@
-let foo = 42 // foo is now a number
-console.log("Foo is 42 which is typeof", (typeof foo))
+let myName ="32"
+let myAge = 32
+let myHappiness = true
+let newVar = 'SOMETHING'
+const myConst = 42
+console.log(myAge == myName)
+console.log(myAge === myName)
 
-foo = "bar" // foo is now a string
-console.log("Foo is bar which is typeof", (typeof foo))
+let myVar = null
+console.log(`myVar is typeof ${typeof myVar}`)
 
-foo = true // foo is now a boolean
-console.log("Foo is true which is typeof ", (typeof foo))
 
-foo = 42 // foo is a number
-const result = foo + "1" // JavaScript coerces foo to a string, so it can be concatenated with the other operand
-console.log("result is 42 + 1 ... ", (typeof result)) // 421
+console.log(`myName is typeof ${typeof myName}`)
+console.log(`myName is value ${myName}`)
+console.log(`myAge is typeof ${typeof myAge}`)
+console.log(`myHappiness is typeof ${typeof myHappiness}`)
+
+// don't use var
+//if (true)  { 
+//    const myConst = 43
+//    console.log(myConst)
+//}
+
