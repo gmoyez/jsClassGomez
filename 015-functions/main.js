@@ -29,6 +29,26 @@ console.log(doMoreMath(20, 30))
     // console.log(`this is the result ${(a * b) - (c * d)}`)
  //}
 
-// let returnValue = doMath(2, 4, 4, 2)
-//     console.log(`this result was returned from the function ${returnValue}`)
+ 
+ // let returnValue = doMath(2, 4, 4, 2)
+ //     console.log(`this result was returned from the function ${returnValue}`)
+ 
+ EvenMoreMath = (a, b, c, d) => a > b      
+ console.log(EvenMoreMath(2, 4, 4, 2))
+ 
+ EvenMoreMath = (a, b, c, d) => a + b + c + d 
+ console.log(EvenMoreMath(2, 4, 4, 2)) 
+ 
+ EvenMoreMath = (a, b, c, d) => a + b / c + d
+ console.log(EvenMoreMath(2, 4, 4, 2))
+ 
+ EvenMoreMath = (a, b, c, d) => (a * b) - (c * d) 
+ console.log(EvenMoreMath(2, 4, 4, 2))
 
+/*  Its pretty cool that we learned both ways to look at funtions.
+    Knowing both is necessary to have a good understanding of JavaScript.
+    Both were fun to work with although we went through arrow 
+    functions a lot faster its cleaner and easier to learn. Yes I brackets but I could get used to 
+    syntax sugar.
+    After looking up Syntactic sugar, it is designed to make code easier to read. Oh yeah, I definitley like it. 
+*/
