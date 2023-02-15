@@ -15,14 +15,17 @@
 
 function  doMath (a, b, c, d) {
     let result = a + b + c + d
-    console.log(`this is the result ${a + b + c / d}`)
-    console.log(`this is the result ${a + b / c + d}`)
-    console.log(`this is the result ${a > b}`)
-    console.log(`this is the result ${a < b }`)
-    // console.log(`this is the result ${c = b}`)
-    // console.log(`this is the result ${b = a}`)
-    console.log(`this is the result ${b / a + d / c }`)
-    console.log(`this is the result ${(a * b) - (c * d)}`)
+    return result
+    // console.log(`this is the result ${a + b + c / d}`)
+    // console.log(`this is the result ${a + b / c + d}`)
+    // console.log(`this is the result ${a > b}`)
+    // console.log(`this is the result ${a < b }`)
+    // // console.log(`this is the result ${c = b}`)
+    // // console.log(`this is the result ${b = a}`)
+    // console.log(`this is the result ${b / a + d / c }`)
+    // console.log(`this is the result ${(a * b) - (c * d)}`)
 }
 
-doMath(2, 4, 4, 2)
+let returnValue = doMath(2, 4, 4, 2)
+    console.log(`this result was returned from the function ${returnValue}`)
+
