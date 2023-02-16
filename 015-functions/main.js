@@ -33,16 +33,16 @@ console.log(doMoreMath(20, 30))
  // let returnValue = doMath(2, 4, 4, 2)
  //     console.log(`this result was returned from the function ${returnValue}`)
  
- EvenMoreMath = (a, b, c, d) => a > b      
+ evenMoreMath = (a, b, c, d) => a > b      
  console.log(EvenMoreMath(2, 4, 4, 2))
  
- EvenMoreMath = (a, b, c, d) => a + b + c + d 
+ evenMoreMath = (a, b, c, d) => a + b + c + d 
  console.log(EvenMoreMath(2, 4, 4, 2)) 
  
- EvenMoreMath = (a, b, c, d) => a + b / c + d
+ evenMoreMath = (a, b, c, d) => a + b / c + d
  console.log(EvenMoreMath(2, 4, 4, 2))
  
- EvenMoreMath = (a, b, c, d) => (a * b) - (c * d) 
+ evenMoreMath = (a, b, c, d) => (a * b) - (c * d) 
  console.log(EvenMoreMath(2, 4, 4, 2))
 
 /*  Its pretty cool that we learned both ways to look at funtions.
