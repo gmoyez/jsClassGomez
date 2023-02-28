@@ -7,4 +7,7 @@ const updateDOM = (input) => {
     divEl.appendChild(h1)
 }
 
-updateDOM('Moises') 
+const mileage = (miles, gallons, price = 3.79) => miles/gallons * price
+
+
+updateDOM(mileage(300, 10, 5.40))
