@@ -1,7 +1,7 @@
 //arrays and Loops
 
-const myMPG = []
-const myTripCost = []
+const MY_MPG = []
+const MY_TRIP_COST = []
 
 const updateDOM = (input) => {
     const divEl = document.querySelector('#output')
@@ -14,25 +14,27 @@ const trackMPGandCost = (miles, gallons, price = 3.79) => {
     const MPG = Math.round(miles/gallons) 
     const tripCost = Math.round(gallons * price) 
     updateDOM(`Miles per gallon is ${MPG} and trip cost is ${tripCost}`)
-    myMPG.push(MPG)
-    myTripCost.push(tripCost)
+    MY_MPG.push(MPG)
+    MY_TRIP_COST.push(tripCost)
+}
+
+const calculateSum = (Array) => {
+    let sum = 0 
+    for(let i = 0; i < Array.length; i++){
+        sum = sum + Array[i]
+    }
+    return sum
 }
 
 const calculateAvg = () => {
-    let sumMPG = 0
-    let sumTripCost = 0
-    for(let i = 0; i < myMPG.length; i++) {
-        sumMPG = sumMPG + myMPG[i]
-        sumTripCost = sumTripCost + myTripCost[i]
-    }
-    let avgMPG = sumMPG/myMPG.length
-    let avgTripCost = sumTripCost/myTripCost.length
+    let sumMPG = calculateSum(MY_MPG)
+    let sumTripCost = calculateSum(MY_TRIP_COST)
+    let avgMPG = sumMPG/MY_MPG.length
+    let avgTripCost = sumTripCost/MY_TRIP_COST.length
         updateDOM(`Average MPG is ${avgMPG}`)
         updateDOM(`Average Trip is ${avgTripCost}`)
 }
 
-// calculateAvgCost
-// commit message "my code for average cost"
 
 trackMPGandCost(360, 15, 5.40)
 trackMPGandCost(320, 12, 5)
