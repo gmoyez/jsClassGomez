@@ -1,11 +1,12 @@
 const FORM = document.getElementById('form-input')
 const ERR = document.getElementById('err')
+const AVG_OUTPUT = document.getElementById('output-avg')
 
 const MY_MPG = []
 const MY_TRIP_COST = []
 
-const updateDOM = (input) => {
-    const divEl = document.querySelector('#output')
+const updateDOM = (input, id) => {
+    const divEl = document.querySelector(id)
     const p = document.createElement('p')
     p.textContent = input
     divEl.appendChild(p)
@@ -14,7 +15,7 @@ const updateDOM = (input) => {
 const trackMPGandCost = (miles, gallons, price = 3.79) => {
     const MPG = Math.round(miles/gallons) 
     const tripCost = Math.round(gallons * price) 
-    updateDOM(`Miles per gallon is ${MPG} and trip cost is ${tripCost}`)
+    updateDOM(`Miles per gallon is ${MPG} and trip cost is ${tripCost}`, '#output')
     MY_MPG.push(MPG)
     MY_TRIP_COST.push(tripCost)
 }
@@ -22,7 +23,6 @@ const trackMPGandCost = (miles, gallons, price = 3.79) => {
 const calculateSUM = (arr) => {
     let sum = 0 
     for(value of arr) {
-        console.log(item)
         sum += value 
     }
     return sum
@@ -33,8 +33,8 @@ const calculateAvg = () => {
     let sumTripCost = calculateSUM(MY_TRIP_COST)
     let avgMPG = sumMPG/MY_MPG.length
     let avgTripCost = sumTripCost/MY_TRIP_COST.length
-        updateDOM(`Average MPG is ${avgMPG}`)
-        updateDOM(`Average Trip is ${avgTripCost}`)
+        updateDOM(`Average MPG is ${avgMPG}`, '#output-avg')
+        updateDOM(`Average Trip is ${avgTripCost}`, '#output-avg')
 }
 
 FORM.addEventListener('submit', (e) => {
@@ -52,12 +52,14 @@ FORM.addEventListener('submit', (e) => {
     } 
 
     if(errMsg.length > 0) {
-        ERR.textContent = ""
-        ERR.className = errMsg
-
+        ERR.textContent = errMsg
     } else {
+        ERR.textContent = ''
+        AVG_OUTPUT.textContent = ''
         trackMPGandCost(miles, gallons, price)
+        calculateAvg()
     }
+    FORM.reset()
 
 })
 
