@@ -8,7 +8,7 @@ const myObj = {
     name: 'Moises',
     age: 32,
     likes: 0,
-    hobbies: ['coding','soccer','football'],
+    hobbies: ['code','soccer','football'],
     mobile: {
         make: 'iPhone 11 Pro Max',
         OS: 'iOS'
@@ -20,23 +20,25 @@ const myObj = {
         this.likes += 1
     }             
 }
-const rioObj = myObj
-rioObj.increaseLikes(rioObj)
-console.log(rioObj)
-rioObj.age = 32
+const moyObj = myObj
+moyObj.increaseLikes(moyObj)
+console.log(moyObj)
+moyObj.age = 32
 
 
 const greeting = myObj.myGreeting('jane')
 console.log(greeting)
 
-console.log(myObj.mobile.make.length)
+console.log(myObj.mobile.make.length) // method example
 
 for(key in myObj){
-    console.log(`key ${key} and value ${myObj[key]} `)
+    console.log(`key ${key} and value ${myObj[key]} `) // looping example
 }
+    
+console.log("The World Baseball Classic was entertaining this YEAR!".toLowerCase()) 
 
-
-
+const i = myObj.myGreeting("")
+    console.log(i)
 
 
 
