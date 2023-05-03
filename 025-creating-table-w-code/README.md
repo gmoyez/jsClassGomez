@@ -11,3 +11,7 @@ I would say in the "main.js" file but more specifically I wouldnt know. If I had
 ## How would we render the tr (table rows)
 
 I would say in the same area as similar to "renderTable" but like renderTr or something in order to get the rows.
+
+## Information on table doesnt line up
+
+Probably rearrange order so that the information matches the headings on the table.
