@@ -15,3 +15,7 @@ I would say in the same area as similar to "renderTable" but like renderTr or so
 ## Information on table doesnt line up
 
 Probably rearrange order so that the information matches the headings on the table.
+
+## how can we fix the rendering table issues at the end of first assignment of week 10?
+
+Not exactly sure to fix the rendering issue. Would say probably in the form area of the code but again unsure. 
