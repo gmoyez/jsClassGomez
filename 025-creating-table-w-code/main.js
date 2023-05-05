@@ -17,11 +17,11 @@ function trackMPGandCost (miles, gallons, price) {
     const tripCost = Math.round(gallons * price) 
     updateDOM(`Miles per gallon is ${MPG} and trip cost is ${tripCost}`, '#output')
     return {
-        MPG: MPG,
-        tripCost: tripCost,
         miles: miles,
         gallons: gallons,
-        price: price
+        price: price,
+        MPG: MPG,
+        tripCost: tripCost,
     }
 }
 
@@ -66,7 +66,19 @@ function renderTableHeadings() {
     return tbl
 }    
 
-    function renderTable() {
+function renderEditDelBtn () {
+    const td = document.createElement('td')
+    const editBtn = document.createElement('button')
+    editBtn.textContent = 'edit'
+    const delBtn = document.createElement('button')
+    delBtn.textContent = 'delete'
+    td.appendChild(editBtn)
+    td.appendChild(delBtn)
+    return td
+}
+
+function renderTable() {
+    TBL_OUTPUT.innerHTML = ''
     const tbl = renderTableHeadings()
     TBL_OUTPUT.appendChild(tbl)
     MY_DATA.forEach(function(obj){
@@ -76,13 +88,13 @@ function renderTableHeadings() {
             td.textContent = obj[key]
              tr.appendChild(td)
         }     
-        const btnTD = document.createElement('td')
-        const editBtn = document.createElement('button')
-        editBtn.textContent = 'edit'
-        const delBtn = document.createElement('button')
-        delBtn.textContent = 'delete'
-        btnTD.appendChild(editBtn)
-        btnTD.appendChild(delBtn)
+        const btnTD = renderEditDelBtn()
+        // const editBtn = document.createElement('button')
+        // editBtn.textContent = 'edit'
+        // const delBtn = document.createElement('button')
+        // delBtn.textContent = 'delete'
+        // btnTD.appendChild(editBtn)
+        // btnTD.appendChild(delBtn)
         tr.appendChild(btnTD)  
         tbl.appendChild(tr)
     }) 

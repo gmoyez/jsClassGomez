@@ -19,3 +19,7 @@ Probably rearrange order so that the information matches the headings on the tab
 ## how can we fix the rendering table issues at the end of first assignment of week 10?
 
 Not exactly sure to fix the rendering issue. Would say probably in the form area of the code but again unsure. 
+
+## final
+
+my only question would be why not keep the button function together with output of the button together. In the middle we have renderTable function could i refactor and group together. 
