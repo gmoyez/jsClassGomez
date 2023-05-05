@@ -73,10 +73,20 @@ function renderEditDelBtn (index) {
     const delBtn = document.createElement('button')
     delBtn.textContent = 'delete'
     // add eventlistener
-    // for edit - refrence the object in the array for the current row in the table and populate the form input fields
+    // for edit - refrence the object in the array 
+    // for the current row in the table 
+    // and populate the form input fields
     editBtn.addEventListener('click', function(e){
-        console.log(index)
+        FORM[0].value = MY_DATA[index].miles 
+        FORM[1].value = MY_DATA[index].gallons 
+        FORM[2].value = MY_DATA[index].price  
+        MY_DATA.splice(index, 1)
     })
+    delBtn.addEventListener('click', function(e){
+        MY_DATA.splice(index, 1)
+        renderTable()
+    })
+
     td.appendChild(editBtn)
     td.appendChild(delBtn)
     return td
@@ -84,25 +94,21 @@ function renderEditDelBtn (index) {
 
 function renderTable() {
     TBL_OUTPUT.innerHTML = ''
-    const tbl = renderTableHeadings()
-    TBL_OUTPUT.appendChild(tbl)
-    MY_DATA.forEach(function(obj, index){
-        const tr = document.createElement('tr')
-        for(key in obj){
-            let td = document.createElement('td')
-            td.textContent = obj[key]
-             tr.appendChild(td)
-        }     
-        const btnTD = renderEditDelBtn(index)
-        // const editBtn = document.createElement('button')
-        // editBtn.textContent = 'edit'
-        // const delBtn = document.createElement('button')
-        // delBtn.textContent = 'delete'
-        // btnTD.appendChild(editBtn)
-        // btnTD.appendChild(delBtn)
-        tr.appendChild(btnTD)  
-        tbl.appendChild(tr)
-    }) 
+    if (MY_DATA.length !== 0) {
+        const tbl = renderTableHeadings()
+        TBL_OUTPUT.appendChild(tbl)
+        MY_DATA.forEach(function (obj, index) {
+            const tr = document.createElement('tr')
+            for (key in obj) {
+                let td = document.createElement('td')
+                td.textContent = obj[key]
+                tr.appendChild(td)
+            }
+            const btnTD = renderEditDelBtn(index)
+            tr.appendChild(btnTD)
+            tbl.appendChild(tr)
+        })
+    }
 
 }
 
