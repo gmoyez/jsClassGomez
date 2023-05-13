@@ -1,5 +1,3 @@
-# Week #11 Local storage
+# Week #11
 
-## First Assignment
-
-This assignment was pretty intresting. I had been hearing of JSON but never really looked into it and its used in vscode like in settings i believe. In my attempt i sorta figured it had to do with "My_Data" but i never guessed it was needed more than once. Overall liked this assignment. My questions were answered towards the end with why the need to store data and recall it.
+After going through this lesson you can tell that modularizing makes it look much cleaner. I dont have a background in coding but like you mentioned it could be much cleaner im not sure what else. I always thought wow look at all those lines of code but much perfer the module look in different sections. Import and export is pretty cool something new for me.
