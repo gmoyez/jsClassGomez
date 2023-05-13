@@ -5,8 +5,6 @@ const FORM = document.getElementById('form-input')
 const ERR = document.getElementById('err')
 const AVG_OUTPUT = document.getElementById('output-avg')
 
-
-
 const MY_DATA = getTripData()
 renderTable(MY_DATA)
 
@@ -75,5 +73,5 @@ FORM.addEventListener('submit', (e) => {
         calculateAvg()
     }
     FORM.reset()
-
+    
 })
