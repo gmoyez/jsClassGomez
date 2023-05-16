@@ -30,12 +30,19 @@ function renderEditDelBtn (MY_DATA, index) {
         FORM[1].value = MY_DATA[index].gallons 
         FORM[2].value = MY_DATA[index].price  
         MY_DATA.splice(index, 1)
+        const disable_edit = document.querySelectorAll('.tbl-btn')
+        disable_edit.forEach(function(btn){
+            btn.setAttribute('disabled', true)
+        })
     })
     delBtn.addEventListener('click', function(e){
         MY_DATA.splice(index, 1)
         saveTripData(MY_DATA)
         renderTable(MY_DATA)
     })
+
+    editBtn.classList.add('tbl-btn')
+    delBtn.classList.add('tbl-btn')
 
     td.appendChild(editBtn)
     td.appendChild(delBtn)
