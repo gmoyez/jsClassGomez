@@ -7,3 +7,7 @@ Class could be implemented possible in the render.js. Using it for the table, ed
 ## what broke and how can we fix it?
 
 My edit button broke, throws erroe message on console. My average and tip output dont show up like normal. just "NaN". Delete worked fine, submit as well. Those are the ones i caught. 
+
+## Implementing Class
+
+Walking away understanding more why its nice to use, specially seeing it get used in our class mileage app. Now looks cleaner and has its own file we can look into speratly. 
