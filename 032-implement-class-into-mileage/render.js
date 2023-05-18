@@ -1,5 +1,6 @@
 import { saveTripData } from "./storage.js"
 import { calculateAvg } from "./handleinput.js"
+
 const FORM = document.getElementById('form-input')
 const TBL_OUTPUT = document.getElementById('table-out')
 
@@ -23,9 +24,9 @@ function renderEditDelBtn (MY_DATA, index) {
     const delBtn = document.createElement('button')
     delBtn.textContent = 'delete'
     editBtn.addEventListener('click', function(e){
-        FORM[0].value = MY_DATA[index]._miles 
-        FORM[1].value = MY_DATA[index]._gallons 
-        FORM[2].value = MY_DATA[index]._price  
+        FORM[0].value = MY_DATA[index].miles 
+        FORM[1].value = MY_DATA[index].gallons 
+        FORM[2].value = MY_DATA[index].price  
         MY_DATA.splice(index, 1)
         const disable_edit = document.querySelectorAll('.tbl-btn')
         disable_edit.forEach(function(btn){
@@ -40,6 +41,7 @@ function renderEditDelBtn (MY_DATA, index) {
 
     editBtn.classList.add('tbl-btn')
     delBtn.classList.add('tbl-btn')
+
     td.appendChild(editBtn)
     td.appendChild(delBtn)
     return td
@@ -47,7 +49,7 @@ function renderEditDelBtn (MY_DATA, index) {
 
 function renderTable(MY_DATA) {
     TBL_OUTPUT.innerHTML = ''
-    if (MY_DATA.length !== 0) {
+    if(MY_DATA.length !== 0) {
         const tbl = renderTableHeadings()
         TBL_OUTPUT.appendChild(tbl)
         MY_DATA.forEach(function (obj, index) {

@@ -9,9 +9,9 @@ function updateDOM (input, id) {
 }
 
 function trackMPGandCost (miles, gallons, price) {
-    const MPG = Number((miles / gallons).toFixed(2)) 
+    const MPG = Number((miles/gallons).toFixed(2)) 
     const tripCost = Number((gallons * price).toFixed(2)) 
-    // updateDOM(`Miles per gallon is ${MPG} and trip cost is ${tripCost}`, '#output')
+    updateDOM(`Miles per gallon is ${MPG} and trip cost is ${tripCost}`, '#output')
     return {
         miles: miles,
         gallons: gallons,
@@ -21,8 +21,8 @@ function trackMPGandCost (miles, gallons, price) {
     }
 }
 
-function calculateAvg(MY_DATA) {
-    AVG_OUTPUT.innerHTML= ''
+function calculateAvg (MY_DATA) {
+    AVG_OUTPUT.innerHTML = ''
     const numberOfObj = MY_DATA.length
     const sums = MY_DATA.reduce(function(sum, obj){
         return {
@@ -31,7 +31,7 @@ function calculateAvg(MY_DATA) {
         }     
     })
     const avgMPG = Number((sums.MPG / numberOfObj).toFixed(2))
-    const avgTripCost = Number((sums.tripCost / numberOfObj).toFixed(2))
+    const avgTripCost = Number((sums.TripCost / numberOfObj).toFixed(2))
         updateDOM(`Average MPG is ${avgMPG}`, '#output-avg')
         updateDOM(`Average Trip is ${avgTripCost}`, '#output-avg')
 }
@@ -51,4 +51,4 @@ function isFormValid (miles, gallons, price) {
     }
 }
 
-export {isFormValid, calculateAvg, trackMPGandCost}
+export { isFormValid, trackMPGandCost, calculateAvg}
